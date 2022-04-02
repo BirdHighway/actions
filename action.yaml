@@ -1,0 +1,15 @@
+name: 'Docker Test'
+description: 'Runs code in a custom docker container'
+inputs:
+  test-input:
+    description: 'Just for testing'
+    required: true
+    default: 'Spaghetti'
+outputs:
+  time:
+    description: 'the time'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.test-input }}
