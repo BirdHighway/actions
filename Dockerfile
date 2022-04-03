@@ -14,4 +14,7 @@ RUN mkdir /app
 COPY ./package.sh /app/package.sh
 
 WORKDIR /app
-ENTRYPOINT ["/bin/sh", "package.sh"]
+
+RUN whoami
+RUN ls
+ENTRYPOINT ["/bin/sh", "/app/package.sh"]
