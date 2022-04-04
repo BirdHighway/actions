@@ -3,8 +3,9 @@
 whoami
 
 echo "First arg: $1"
+git config user.email
 git config -l
-URL="https://$1@github.com/$GITHUB_REPOSITORY.git"
+URL="https://github.com/$GITHUB_REPOSITORY.git"
 echo "URL: $URL"
 git clone "$URL"
 ls
