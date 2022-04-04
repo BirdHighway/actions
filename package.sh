@@ -9,6 +9,9 @@ URL="https://github.com/$GITHUB_REPOSITORY.git"
 echo "URL: $URL"
 git clone "$URL"
 ls
+cd cli
+npm install
+npx oclif-dev pack:deb
 time=$(date)
 env
 echo "::set-output name=time::$time"
